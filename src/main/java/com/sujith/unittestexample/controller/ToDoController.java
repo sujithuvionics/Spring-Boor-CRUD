@@ -31,6 +31,7 @@ public class ToDoController {
 
 	@GetMapping("/todo")
 	public ResponseEntity<List<ToDo>> getAllToDo() {
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
 		logger.info("Returning all the ToDo´s");
 		return new ResponseEntity<>(toDoService.getAllToDo(), HttpStatus.OK);
 	}
@@ -39,6 +40,69 @@ public class ToDoController {
 	public ResponseEntity<ToDo> getToDoById(@PathVariable("id") long id) throws ToDoException {
 		logger.info("ToDo id to return {} " , id);
 		ToDo toDo = toDoService.getToDoById(id).orElseThrow(() -> new ToDoException("ToDo doesn´t exist"));
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++");
+		
+		
+		
 		return new ResponseEntity<>(toDo, HttpStatus.OK);
 	}
 
