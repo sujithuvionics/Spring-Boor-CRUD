@@ -38,18 +38,14 @@ public class ToDoController {
 	@GetMapping("/todo/{id}")
 	public ResponseEntity<ToDo> getToDoById(@PathVariable("id") long id) throws ToDoException {
 		logger.info("ToDo id to return {} " , id);
-		ToDo toDo = toDoService.getToDoById(id).orElseThrow(() -> new ToDoException("ToDo doesn´t exist"));
+		ToDo toDo = toDoService.getToDoById(id);
 		return new ResponseEntity<>(toDo, HttpStatus.OK);
 	}
 
    @DeleteMapping("/todo/{id}")
 	public ResponseEntity<Response> removeToDoById(@PathVariable("id") long id) throws ToDoException {
 		logger.info("ToDo id to remove {} " , id);
-		ToDo toDo = toDoService.getToDoById(id).orElseThrow(() -> new ToDoException("No data"));
-		if (toDo == null || toDo.getId() <= 0) {
-			throw new ToDoException("ToDo to delete doesn´t exist");
-		}
-		toDoService.removeToDo(toDo);
+		toDoService.removeToDo(id);
 		return new ResponseEntity<>(new Response(HttpStatus.OK.value(), "ToDo has been deleted"),
 				HttpStatus.OK);
 	}
@@ -66,8 +62,7 @@ public class ToDoController {
 	@PatchMapping("todo")
 	public ResponseEntity<ToDo> updateToDo(@RequestBody ToDo toDo) throws ToDoException {
 		logger.info("Payload to update {} " , toDo);
-		ToDo toDoData = toDoService.getToDoById(toDo.getId()).orElseThrow(() -> new ToDoException("ToDo to update doesn´t exist"));
-		return new ResponseEntity<>(toDoService.saveToDo(toDoData), HttpStatus.OK);
+		return new ResponseEntity<>(toDoService.saveToDo(toDo), HttpStatus.OK);
 	}
 
 }
